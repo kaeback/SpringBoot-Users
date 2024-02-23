@@ -35,5 +35,5 @@ echo "> JAR Name: $JAR_NAME"
 # nohup : 프로세스를 데몬 형태로 실행하게 되어 사용자 세션이 끊어져도 종료되지 않고 게속 실행된다.
 # 2>&1 : 표준 출력과 표준에러를 같은 파일에 출력한다.
 # & : &를 맨 끝에 붙이면 프로세스를 백그라운드로 실행한다.
-nohup java -jar -Dspring.config.location=classpath:/home/ec2-user/app/application-real.yml \
+nohup java -jar -Dspring.config.location=/home/ec2-user/app/application-real.yml \
 $REPOSITORY/$JAR_NAME > $REPOSITORY/nohup.out 2>&1 &
